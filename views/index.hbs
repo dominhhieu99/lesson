@@ -1,13 +1,13 @@
 <style>
         .test{
-          width: 1200px;
+          width: 900px;
           min-height: 400px;    
           margin-top: 10px;  
           text-align: center;
           line-height: 80px;
         }
         .navitation{
-          width: 1200px;
+          width: 900px;
           margin-top: 10px;  
           text-align: center;
         }
@@ -18,41 +18,32 @@
         .thead-light{
           line-height: 25px;
         }
-        .nav-link {
-          line-height: 25px;
-           width="200"; height="100";
-           background: rgb(0, 0, 0);
-           
-           
+        .btn-success{
+          background-color: white;
+          color:forestgreen;
+          border: 2px solid #4CAF50;
+          font-weight: bold;
         }
-        .nav-item{
-          line-height: 25px;
-           width="100"; height="100";
-           margin-left: 10px; 
+        .btn-danger{
+          background-color: white;
+          color: red;
+          border: 2px solid red; 
+          font-weight: bold;
         }
-        .card-header{
-          height: 70px;
-          background: rgb(0, 0, 0);
+        .btn-primary{
+          background-color: white;
+          color:darkturquoise;
+          border: 2px solid deepskyblue; 
+          font-size: 15pt;
+          font-weight: bold;
         }
+        
         
 </style>
 
 
 
 <div class="container navitation">
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs card-hover">
-      <a href="/"><img src="https://pbs.twimg.com/profile_images/2693319772/492d91d17f3459b09e1c7daa139b5738.jpeg" width="100" height="50"></a>
-      <li class="nav-item"><a class="nav-link active" href="/" class="text-decoration-none" style="color: #000000">iPhone</a></li>
-      <li class="nav-item"><a class="nav-link" href="/" class="text-decoration-none" style="color: #fff">iPad</a></li>
-      <li class="nav-item"><a class="nav-link" href="/" class="text-decoration-none" style="color: #fff">Mac</a></li>
-      <li class="nav-item"><a class="nav-link" href="/" class="text-decoration-none" style="color: #fff">Apple Watch</a></li>
-      <li class="nav-item"><a class="nav-link" href="/" class="text-decoration-none" style="color: #fff">Phụ kiện</a></li>
-      <li class="nav-item"><a class="nav-link" href="/" class="text-decoration-none" style="color: #fff">Thông tin</a></li>
-      <input type="text" value="" class="search_input" title="Tìm kiếm sản phẩm" class="ty-search-block__input cm-hint">
-    </ul>
-  </div>
   <table class="table table-bordered table-hover"> 
   <thead class="thead-light">
     <tr> 
@@ -172,29 +163,5 @@
            <a href="product/addProduct"> <button type="button" class="btn btn-primary col-3">Thêm Sản Phẩm</button></a>
            <a href="category/listCategory"> <button type="button" class="btn btn-primary col-3">Danh Mục</button></a>
           </div>
-          
 </div>
-  <div class="dropdown-menu">
-  <form class="px-4 py-3">
-    <div class="form-group">
-      <label for="exampleDropdownFormEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-    </div>
-    <div class="form-group">
-      <label for="exampleDropdownFormPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-        <label class="form-check-label" for="dropdownCheck">
-          Remember me
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </form>
-  <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">New around here? Sign up</a>
-  <a class="dropdown-item" href="#">Forgot password?</a>
-</div>
+  
