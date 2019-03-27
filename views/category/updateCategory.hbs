@@ -1,43 +1,72 @@
 <style>
         .test{
-          width: 400px;
-          min-height: 170px; 
+          width: 500px;
+          min-height: 380px; 
           border: gray solid 2px;    
           margin-top: 10px;
-          {{!-- background: url(http://localhost:3000/images/anh1.jpg) --}}
+          background: url(http://localhost:3000/images/water.jpg);
+          border:brown;
+        } 
+        .select{
+          margin-top: 10px;
         } 
         .input1{
           margin-top: 10px;
         }
-    
+        .input-group{
+          margin-top: 10px;
+        }
         .text{
+          color: red;
           text-align: center;
           margin-top: 5px;
+        }
+        .input-group-prepend{
+          min-height: 100px;
         }
         .btn{
           width: 366px;
           margin-top: 15px;
-        }.btn-info{
+          margin-left: 65px;
+        }
+        .btn-info{
           background-color: white;
           color: red;
           border: 2px solid cyan; 
           font-size: 15pt;
           font-weight: bold; 
         }
+        .custom-file{
+          margin-top: 15px;
+        }
 </style>
 <div class="container test">
  <div class="text">
   <h3>Update Danh Mục</h3>
   </div>
-
    <div class="input1">
    <input type="text" class="form-control" 
-     placeholder="iPhone Xs" 
+     placeholder="iphone" 
      aria-label="Recipient's username" 
      aria-describedby="button-addon2">
      </div>
+        <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+  </div>
+     <div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Mô Tả</span>
+  </div>
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+   </div >
 
-   <a href="listCategory"><button type="button" class="btn btn-info">Lưu </button></a>
+      <td> 
+           
+           <a href="/Category"><button type="button" class="btn btn-info">Lưu</button></a>
+           <a href="/Category"><button type="button" class="btn btn-info">Hủu</button></a>
+          
+   </td>
   
      
 </div>

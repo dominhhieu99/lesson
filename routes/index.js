@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 router.get('/hieu', function(req, res, next){
   res.render('hieu');
 });
-router.get('/loign', function(req, res, next){
-  res.render('loign');
+router.get('/Category', function(req, res, next){
+  res.render('Category');
 });
 module.exports = router;
