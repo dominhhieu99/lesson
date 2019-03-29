@@ -1,13 +1,13 @@
 <style>
         .test{
-          width: 1080px;
+          width: 1280px;
           min-height: 400px;    
           margin-top: 10px;  
           text-align: center;
           line-height: 80px;
         }
         .navitation{
-          width: 1080px;
+          width: 1280px;
           margin-top: 10px;  
           text-align: center;
         }
@@ -34,7 +34,6 @@
           background-color: white;
           color:darkturquoise;
           border: 2px solid deepskyblue; 
-          font-size: 15pt;
           font-weight: bold;
         }
         
@@ -44,17 +43,17 @@
 
 
 <div class="container navitation">
-  <table class="table table-bordered table-hover"> 
+  <table class="bg-success table-bordered table-hover"> 
   <thead class="thead-light">
     <tr> 
-      <th scope="col">ID</th>
-      <th scope="col">Tên Sản</th>
+      <th style="max-width: 20px;">ID</th>
+      <th style="width: 200px;">Tên Sản</th>
       <th scope="col">Ảnh</th>
-      <th scope="col">Mô Tả</th>
-      <th scope="col">Công Cụ</th>
+      <th style="width: 200px;">Mô Tả</th>
+      <th style="width: 200px;">Công Cụ</th>
     </tr>
   </thead>
-  <tbody>
+  {{!-- <tbody>
     <tr>
       <th scope="row">1</th>
       <td >iPhone</td>
@@ -133,6 +132,22 @@
     
     
     
+  </tbody> --}}
+  <tbody>
+            {{#each cates}}
+            <tr class="table-success">
+                <td>{{this._id}}</td>
+                <td>{{this.name}}</td>
+                <td>
+                    <img src="{{this.image}}" class="img-responsive" width="100">
+                </td>
+                <td>{{this.description}}</td>
+                <td>
+                    <a href="/cates/edit/{{this._id}}" class="btn btn-primary col-5">Sửa</a>
+                    <a href="/cates/remove/{{this._id}}" class="btn btn-danger col-5">Xóa</a>
+                </td>
+            </tr>
+        {{/each}}
   </tbody>
 </table>
 </div>
