@@ -1,7 +1,7 @@
 <style>
         .test{
           width: 500px;
-          min-height: 380px; 
+          min-height: 500px; 
           border: gray solid 2px;    
           margin-top: 10px;
           background: url(http://localhost:3000/images/water.jpg);
@@ -40,34 +40,44 @@
           margin-top: 15px;
         }
 </style>
+<form action="/cates/save-edit" method="post" enctype="multipart/form-data">
 <div class="container test">
  <div class="text">
+   <input type="hidden" name="id" value="{{cate._id}}">
   <h3>Update Danh Mục</h3>
   </div>
    <div class="input1">
-   <input type="text" class="form-control" 
+     <label style="text-align: center">Tên danh mục</label>
+   <input type="text" name="name" value="{{cate.name}}" class="form-control" 
      placeholder="iphone" 
      aria-label="Recipient's username" 
      aria-describedby="button-addon2">
      </div>
-        <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+
+  <div class="custom-file">
+    <br>
+        <img src="{{cate.image}}" width="150">
+        <br>
+        <label for="">Ảnh danh mục</label>
+        <br>
+    <input type="file" name="image" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
     <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
   </div>
+
      <div class="input-group">
   <div class="input-group-prepend">
     <span class="input-group-text">Mô Tả</span>
   </div>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
+<textarea name="description" value="{{cate.description}}" class="form-control" aria-label="With textarea"></textarea>
    </div >
 
       <td> 
            
-           <a href="/Category"><button type="button" class="btn btn-info">Lưu</button></a>
+           <button type="submit" class="btn btn-info">Lưu</button>
            <a href="/Category"><button type="button" class="btn btn-info">Hủu</button></a>
           
    </td>
   
      
 </div>
-
+</form>

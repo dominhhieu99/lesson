@@ -8,20 +8,17 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
 var categoryRouter = require('./routes/category');
+var multer = require('multer');
 var app = express();
 
-//Nhập mô-đun mongoose
+// using mongoose js
 var mongoose = require('mongoose');
+let dev_db_url = 'mongodb://localhost:27017/pt13353';
 
-//Thiết lập một kết nối mongoose mặc định
-var mongoDB = 'mongodb://127.0.0.1/pt13353';
-mongoose.connect(mongoDB);
-//Ép Mongoose sử dụng thư viện promise toàn cục
+let mongoDB = process.env.MONGODB_URI || dev_db_url;
+mongoose.connect(mongoDB, {useNewUrlParser: true, useCreateIndex: true});
 mongoose.Promise = global.Promise;
-//Lấy kết nối mặc định
-var db = mongoose.connection;
-
-//Ràng buộc kết nối với sự kiện lỗi (để lấy ra thông báo khi có lỗi)
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // view engine setup

@@ -162,7 +162,7 @@
     
   </tbody> --}}
   <tbody>
-  {{#each product}}
+  {{#each products}}
             <tr class="table-success" >
                 <td>{{this._id}}</td>
                 <td>{{this.cate_id}}</td>
@@ -173,8 +173,8 @@
                 </td>
                 <td>{{this.detail}}</td>
                 <td>
-                    <a href="/product/edit/{{this._id}}" class="btn btn-success">Sửa</a>
-                    <a href="/product/remove/{{this._id}}" class="btn btn-danger">Xóa</a>
+                    <a href="/products/edit/{{this._id}}" class="btn btn-success">Sửa</a>
+                    <a href="/products/remove/{{this._id}}" class="btn btn-danger">Xóa</a>
                 </td>
             </tr>
         {{/each}}
