@@ -10,6 +10,20 @@ var productRouter = require('./routes/product');
 var categoryRouter = require('./routes/category');
 var app = express();
 
+//Nhập mô-đun mongoose
+var mongoose = require('mongoose');
+
+//Thiết lập một kết nối mongoose mặc định
+var mongoDB = 'mongodb://127.0.0.1/pt13353';
+mongoose.connect(mongoDB);
+//Ép Mongoose sử dụng thư viện promise toàn cục
+mongoose.Promise = global.Promise;
+//Lấy kết nối mặc định
+var db = mongoose.connection;
+
+//Ràng buộc kết nối với sự kiện lỗi (để lấy ra thông báo khi có lỗi)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

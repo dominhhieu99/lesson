@@ -37,16 +37,22 @@
           margin-top: 15px;
         }
 </style>
+<form action="/cates/save-add" method="post">
 <div class="container test">
  <div class="text">
   <h3>Thêm Danh Mục</h3>
   </div>
    <div class="input1">
-   <input type="text" class="form-control" 
+   <input type="text" name="name" class="form-control" 
      placeholder="Tên Danh Mục" 
      aria-label="Recipient's username" 
      aria-describedby="button-addon2">
      </div>
+     <div>
+        <label for="">Ảnh danh mục</label>
+        <br>
+        <input type="text" name="image" >
+    </div>
         <div class="custom-file">
     <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
     <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
@@ -55,16 +61,14 @@
   <div class="input-group-prepend">
     <span class="input-group-text">Mô Tả</span>
   </div>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
+  <textarea  name="description"  class="form-control" aria-label="With textarea"></textarea>
    </div>
 
       <td> 
            
-           <a href="/Category"><button type="button" class="btn btn-info">Lưu</button></a>
+           <button type="submit" class="btn btn-info">Lưu</button>
            <a href="/Category"><button type="button" class="btn btn-info">Hủu</button></a>
           
-   </td>
-  
-     
+   </td>   
 </div>
-
+</form>
