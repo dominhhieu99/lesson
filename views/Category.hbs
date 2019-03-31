@@ -47,7 +47,7 @@
   <thead class="thead-light">
     <tr> 
       <th style="max-width: 20px;">ID</th>
-      <th style="width: 200px;">Tên Sản</th>
+      <th style="width: 200px;">Tên Danh Muc</th>
       <th scope="col">Ảnh</th>
       <th style="width: 200px;">Mô Tả</th>
       <th style="width: 200px;">Công Cụ</th>
@@ -143,8 +143,8 @@
                 </td>
                 <td>{{this.description}}</td>
                 <td>
-                    <a href="/cates/edit/{{this._id}}" class="btn btn-primary col-5">Sửa</a>
-                    <a href="/cates/remove/{{this._id}}" class="btn btn-danger col-5">Xóa</a>
+                    <a href="/cates/edit/{{this._id}}" class="btn btn-primary col-5">Update</a>
+                    <a href="/cates/remove/{{this._id}}" class="btn btn-danger col-5">Delete</a>
                 </td>
             </tr>
         {{/each}}
@@ -153,7 +153,7 @@
 </div>
 
            <div class="insert" style="text-align: center">
-           <a href="category/addCategory"> <button type="button" class="btn btn-primary col-3">Thêm Danh Mục</button></a>
-           <a href="/"> <button type="button" class="btn btn-primary col-3">Danh Sách Sản Phẩm</button></a>
+           <a href="category/addCategory"> <button type="button" class="btn btn-primary col-3">Add Category</button></a>
+           <a href="/"> <button type="button" class="btn btn-primary col-3">List Product</button></a>
           </div>
 </div>

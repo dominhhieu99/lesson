@@ -52,7 +52,7 @@
       <th scope="col">Giá Thành</th>
       <th scope="col">Ảnh</th>
       <th scope="col">Mô Tả</th>
-      <th scope="col">Công Cụ</th>
+      <th style="width: 200px;">Công Cụ</th>
     </tr>
   </thead>
   {{!-- <tbody>
@@ -173,8 +173,8 @@
                 </td>
                 <td>{{this.detail}}</td>
                 <td>
-                    <a href="/products/edit/{{this._id}}" class="btn btn-success">Sửa</a>
-                    <a href="/products/remove/{{this._id}}" class="btn btn-danger">Xóa</a>
+                    <a href="/products/edit/{{this._id}}" class="btn btn-success">Update</a>
+                    <a href="/products/remove/{{this._id}}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         {{/each}}
@@ -183,8 +183,8 @@
 </div>
 
            <div class="insert" style="text-align: center">
-           <a href="product/addProduct"> <button type="button" class="btn btn-primary col-3">Thêm Sản Phẩm</button></a>
-           <a href="Category"> <button type="button" class="btn btn-primary col-3">Danh Mục</button></a>
+           <a href="product/addProduct"> <button type="button" class="btn btn-primary col-3">Add Product</button></a>
+           <a href="Category"> <button type="button" class="btn btn-primary col-3">List Category</button></a>
           </div>
 </div>
   

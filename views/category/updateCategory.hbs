@@ -37,7 +37,9 @@
           font-weight: bold; 
         }
         .custom-file{
+          text-align: center;
           margin-top: 15px;
+          align-content: center;
         }
 </style>
 <form action="/cates/save-edit" method="post" enctype="multipart/form-data">
@@ -55,8 +57,10 @@
      </div>
 
   <div class="custom-file">
-    <br>
+        <br>
+        <br>
         <img src="{{cate.image}}" width="150">
+        <br>
         <br>
         <label for="">Ảnh danh mục</label>
         <br>
@@ -68,13 +72,13 @@
   <div class="input-group-prepend">
     <span class="input-group-text">Mô Tả</span>
   </div>
-<textarea name="description" value="{{cate.description}}" class="form-control" aria-label="With textarea"></textarea>
+<textarea name="description" value="{{cate.description}}" class="form-control" aria-label="With textarea">{{cate.description}}</textarea>
    </div >
 
       <td> 
            
-           <button type="submit" class="btn btn-info">Lưu</button>
-           <a href="/Category"><button type="button" class="btn btn-info">Hủu</button></a>
+           <button type="submit" class="btn btn-info">Update</button>
+           <a href="/Category"><button type="button" class="btn btn-info">Closed</button></a>
           
    </td>
   

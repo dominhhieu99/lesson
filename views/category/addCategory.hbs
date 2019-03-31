@@ -43,10 +43,10 @@
   <h3>Thêm Danh Mục</h3>
   </div>
    <div class="input1">
-   <input type="text" name="name" class="form-control" 
-     placeholder="Tên Danh Mục" 
+   <input type="text" name="name" pattern="^[_A-z0-9]{1,}$" minlength = "6" class="form-control" 
      aria-label="Recipient's username" 
-     aria-describedby="button-addon2">
+     aria-describedby="button-addon2" placeholder="Enter your name" required />
+	
      </div>
      <div>
         <label for="">Ảnh danh mục</label>
@@ -61,14 +61,15 @@
   <div class="input-group-prepend">
     <span class="input-group-text">Mô Tả</span>
   </div>
-  <textarea  name="description"  class="form-control" aria-label="With textarea"></textarea>
+  <textarea  pattern="^[_A-z0-9]{1,}$"  name="description"  class="form-control" aria-label="With textarea" required></textarea>
    </div>
 
       <td> 
            
-           <button type="submit" class="btn btn-info">Lưu</button>
-           <a href="/Category"><button type="button" class="btn btn-info">Hủu</button></a>
+           <button type="submit" class="btn btn-info">Save</button>
+           <a href="/Category"><button type="button" class="btn btn-info">Closed</button></a>
           
    </td>   
 </div>
+
 </form>
