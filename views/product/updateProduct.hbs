@@ -37,70 +37,68 @@
           font-weight: bold;
         }
         .custom-file{
+          text-align: center;
           margin-top: 15px;
+          align-content: center;
         }
 </style>
-<div class="container test">
- <div class="text">
-  <h3 >Update Thông Tin</h3>
-  </div>
+<form action="/products/save-edit" method="post"  enctype="multipart/form-data">
 
+<div class="container test">
+     <input type="hidden" name="id" value="{{products._id}}">
+ <div class="text">
+  <h3>Thêm Sản Phẩm</h3>
+  </div>
+{{!-- 
   <div class="select">
      <select class="custom-select" id="inputGroupSelect01">
-    <option value="">Chọn Danh Mục</option>
-    <option selected value="1">iPhone</option>
+    <option selected>Chọn Danh Mục</option>
+    <option value="1">iPhone</option>
     <option value="2">iPad</option>
     <option value="3">Mac</option>
     <option value="4">iMac</option>
     <option value="5">Apple Watch</option>
     <option value="6">Phụ Kiện</option>
    </select>
-   </div>
+   </div> --}}
 
    <div class="input1">
-   <input type="text" class="form-control" 
-     placeholder="iPhone Xs" 
+   <input type="text" name="name" value="{{products.name}}" pattern="^[_A-z0-9]{}$" minlength = "6" class="form-control" 
      aria-label="Recipient's username" 
-     aria-describedby="button-addon2">
+     aria-describedby="button-addon2" placeholder="Enter your name" required />
      </div>
-        <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+          <div>
+        <label for="">Ảnh danh mục</label>
+        <br>
+    </div>
+       <div class="custom-file">
+        <br>
+        <br>
+        <img src="{{products.image}}" width="150">
+        <br>
+        <br>
+        <label for="">Ảnh danh mục</label>
+        <br>
+    <input type="file" name="image" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
     <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
   </div>
      <div class="input-group mb-3">
-  <input type="number" class="form-control" placeholder="49.900.000 " aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input type="text" value="{{products.price}}" name="price" pattern="^[_A-z0-9]{}$" class="form-control" placeholder="Giá Thành" aria-label="Recipient's username" aria-describedby="basic-addon2"required>
   <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">VNĐ</span>
   </div>
      </div>
 
      <div class="input-group">
-       
   <div class="input-group-prepend">
     <span class="input-group-text">Mô Tả</span>
   </div>
-  
-  <textarea class="form-control" aria-label="With textarea">
-- So CPU:	6
-- Kích thước:	143.6 x 70.9 x 7.7 mm
-- Màn hình:	5.8 inchs
-- Camera:	7.0 MP/ Dual Camera 12.0 MP
-- RAM:	4 GB
-- Bộ nhớ trong:	64 GB
-- Hệ điều hành:	iOS 12
-- Chipset:	Apple A12 Bionic
-- CPU:	Đang cập nhật
-- GPU:	Apple GPU 4 nhân
-- Kích thước:	143.6 x 70.9 x 7.7 mm
-  </textarea>
-  
-   <td> 
-           
-           <a href="/"><button type="button" class="btn btn-info">Update</button></a>
-           <a href="/"><button type="button" class="btn btn-info">Close</button></a>
-          
-   </td>
-  
+  <textarea class="form-control" value="{{products.detail}}" pattern="^[_A-z0-9]{1,}$" minlength = "6"   name="detail" aria-label="With textarea" >{{products.detail}}</textarea>
+   </div>
 
+      <td> 
+           <button type="submit" class="btn btn-info">Save</button>
+           <a href="/"><button type="button" class="btn btn-info">Closed</button></a>
+   </td>  
 </div>
-
+</form>
