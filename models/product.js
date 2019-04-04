@@ -10,7 +10,7 @@ var Schema = mongoose.Schema;
     image: {type: String, default: null},
     detail: {type: String, default: null},
     price:{type: String, default: null},
-    cate_id: { type: Schema.Types.ObjectId, ref: 'categories',default: null }
+    cate_id: { type: Schema.Types.ObjectId, ref: 'categories'}
  });
 
 
